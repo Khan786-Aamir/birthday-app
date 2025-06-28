@@ -131,3 +131,28 @@ body {
   font-size: 0.95rem;
   line-height: 1.3;
 }
+/* ✅ Mobile Responsive Fix */
+@media screen and (max-width: 480px) {
+  .modal-content {
+    padding: 1rem;
+    width: 95%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 0.8rem 1rem;
+  }
+
+  #wishForm input,
+  #wishForm textarea {
+    font-size: 0.9rem;
+  }
+}
