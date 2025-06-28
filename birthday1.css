@@ -6,12 +6,14 @@
   --card-bg: #ffffff;
   --text-main: #333;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 body {
   background: var(--bg);
   color: var(--text-main);
@@ -21,115 +23,111 @@ body {
   align-items: flex-start;
   padding: 2rem 1rem;
 }
+
 .container {
   width: 100%;
   max-width: 720px;
 }
+
 .title {
   text-align: center;
   font-size: 2rem;
   margin-bottom: 1.5rem;
 }
+
 .btn {
   cursor: pointer;
   border: none;
   outline: none;
-  padding: 0.7rem 1.4rem;
-  font-size: 1rem;
+  padding: 0.9rem 1.6rem;
+  font-size: 1.1rem;
   border-radius: 0.5rem;
   transition: background 0.2s;
 }
+
 .primary {
   background: var(--primary);
   color: #fff;
 }
-.primary:hover { background: var(--primary-dark); }
+.primary:hover {
+  background: var(--primary-dark);
+}
+
 .success {
   background: var(--success);
   color: #fff;
 }
+
 .modal {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   backdrop-filter: blur(3px);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 999;
 }
-.hidden { display: none !important; }
+
+.hidden {
+  display: none !important;
+}
+
 .modal-content {
   background: var(--card-bg);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 1rem;
-  width: 90%;
+  width: 90vw;
   max-width: 420px;
+  max-height: 90vh;
+  overflow-y: auto;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
+
 .close {
   float: right;
   font-size: 1.4rem;
   cursor: pointer;
 }
+
+#wishForm {
+  display: flex;
+  flex-direction: column;
+}
+
 #wishForm input,
 #wishForm textarea {
   width: 100%;
   margin: 0.8rem 0;
   padding: 0.6rem 0.8rem;
+  font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 0.4rem;
   resize: none;
 }
+
 .wishes-grid {
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
+
 .card {
   background: var(--card-bg);
   padding: 1rem 1.2rem;
   border-radius: 0.8rem;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
+
 .card h3 {
   font-size: 1rem;
   margin-bottom: 0.4rem;
 }
+
 .card p {
   font-size: 0.95rem;
   line-height: 1.3;
-}
-.modal-content {
-  width: 90vw;        /* 90% of viewport width */
-  max-width: 420px;
-  padding: 1.5rem;
-  border-radius: 1rem;
-}
-.modal-content {
-  background: var(--card-bg);
-  padding: 1.2rem;
-  border-radius: 1rem;
-  width: 90vw;                 /* Use viewport width */
-  max-width: 420px;
-  max-height: 90vh;            /* Prevent it from going off screen */
-  overflow-y: auto;            /* Scroll if content exceeds screen */
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-#wishForm input,
-#wishForm textarea {
-  width: 100%;
-  margin: 0.8rem 0;
-  padding: 0.6rem 0.8rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 0.4rem;
-  resize: none;
-}
-.btn {
-  padding: 0.9rem 1.5rem;
-  font-size: 1.1rem;
-  border-radius: 0.6rem;
 }
