@@ -108,3 +108,28 @@ body {
   padding: 1.5rem;
   border-radius: 1rem;
 }
+.modal-content {
+  background: var(--card-bg);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  width: 90vw;                 /* Use viewport width */
+  max-width: 420px;
+  max-height: 90vh;            /* Prevent it from going off screen */
+  overflow-y: auto;            /* Scroll if content exceeds screen */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+#wishForm input,
+#wishForm textarea {
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.4rem;
+  resize: none;
+}
+.btn {
+  padding: 0.9rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 0.6rem;
+}
