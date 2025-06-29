@@ -127,4 +127,7 @@ body {
   .wishes-grid {
     grid-template-columns: 1fr;
   }
+.modal {
+  background: rgba(0, 0, 0, 0.25); /* fallback in case blur doesn't work */
+  backdrop-filter: blur(3px);
 }
