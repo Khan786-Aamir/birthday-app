@@ -1,52 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Birthday Wishes Wall 🎂</title>
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-<script src="js/script.js"></script>
-<script src="js/firebase-config.js"></script>
+  <title>Birthday Wishes Wall 🎂</title>  <!-- Google Font -->  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">  <!-- Local stylesheet -->  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
-    <h1 class="title">Happy 18th Birthday, Aamir! 🥳</h1>
+    <h1 class="title">Happy 18th Birthday, Aamir! 🥳</h1><!-- Write‑a‑wish button -->
+<button id="openForm" class="btn primary">Write a Wish</button>
 
-    <!-- Write‑a‑wish button -->
-    <button id="openForm" class="btn primary">Write a Wish</button>
-
-    <!-- ========= Modal Form ========= -->
-    <div id="formModal" class="modal hidden">
-      <div class="modal-content">
-        <span id="closeForm" class="close">×</span>
-        <h2>Leave a Birthday Wish</h2>
-        <form id="wishForm">
-          <input type="text" id="name" placeholder="Your Name" required />
-          <textarea id="message" placeholder="Your wish..." rows="4" required></textarea>
-          <button type="submit" class="btn success">Send Wish</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- ========= Wishes Wall ========= -->
-    <section id="wishesContainer" class="wishes-grid"></section>
+<!-- ========= Modal Form ========= -->
+<div id="formModal" class="modal hidden" aria-hidden="true" role="dialog" aria-labelledby="formTitle">
+  <div class="modal-content">
+    <span id="closeForm" class="close" role="button" aria-label="Close modal">×</span>
+    <h2 id="formTitle">Leave a Birthday Wish</h2>
+    <form id="wishForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <textarea id="message" placeholder="Your wish..." rows="4" required></textarea>
+      <button type="submit" class="btn success">Send Wish</button>
+    </form>
   </div>
+</div>
 
-  <!-- Confetti Canvas (placed at end of body for perf) -->
-  <canvas id="confetti-canvas"></canvas>
+<!-- ========= Wishes Wall ========= -->
+<section id="wishesContainer" class="wishes-grid" aria-live="polite"></section>
 
-  <!-- Firebase SDKs -->
-  <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js"></script>
+  </div>  <!-- Confetti Canvas --><canvas id="confetti-canvas"></canvas>
 
-  <!-- Confetti lib -->
-  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
-
-  <!-- Your local scripts -->
-  <script src="firebase-config.js"></script>
-  <script src="script.js"></script>
-</body>
+  <!-- ========== Vendor Scripts ========== -->  <!-- Firebase SDKs -->  <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-app-compat.js" defer></script>  <script src="https://www.gstatic.com/firebasejs/10.11.1/firebase-firestore-compat.js" defer></script>  <!-- Confetti lib -->  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js" defer></script>  <!-- ========== Local Scripts (defer guarantees they run after DOM is ready) ========== -->  <script src="js/firebase-config.js" defer></script>  <script src="js/script.js" defer></script></body>
 </html>
