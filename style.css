@@ -47,9 +47,9 @@ body {
   border: none;
   outline: none;
   padding: 0.7rem 1.4rem;
-  font-size: 1rem;
+  font-size: 50px;
   border-radius: 15px;
-  transition: background 0.2s;
+  transition: background 5px;
 }
 
 .primary {
