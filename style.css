@@ -188,19 +188,8 @@ body {
 .modal {
   background: rgba(0, 0, 0, 0.25); /* fallback if blur fails */
 }
-.btn-yellow {
-  background-color: yellow;
-  color: #333;                /* dark text for contrast */
-  padding: 1rem 2rem;         /* bigger size */
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 0.6rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.btn-yellow:hover {
-  background-color: #ffd700; /* golden yellow on hover */
+button{
+   background-color: yellow;
 }
 
 
